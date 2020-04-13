@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Final Project</title>
+</head>
+<body>
+    <div class="d-flex flex-col" style="justify-content: center;align-items:center;height:inherit;">
+        <h1>YOU WIN</h1>
+        <h2>Total Moves: </h2>
+        <button class="btn" onclick="gamePage()">Play Again</button>
+    </div>
+</body>
+</html>
+
+<script>
+    if(localStorage.getItem('moves')){
+        document.querySelector('h2').innerHTML += localStorage.getItem('moves');
+        localStorage.clear();
+    } else {
+        window.location.href = "/";
+    }
+
+    gamePage = () =>{
+        window.location.href = "/";
+    } 
+</script>

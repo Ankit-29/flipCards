@@ -1,0 +1,135 @@
+.flip-container {
+    perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container-easy,
+.front-easy,
+.back-easy {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+}
+
+.flip-container-medium,
+.front-medium,
+.back-medium {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.flip-container-hard,
+.front-hard,
+.back-hard {
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    /* position: relative; */
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: #66fcf1;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+.icon-font {
+    color: black;
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    animation-name: whiteToBlue;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.cols-easy {
+    flex-basis: 25%;
+}
+
+.cols-medium {
+    flex-basis: 12.5%;
+}
+
+.cols-hard {
+    flex-basis: 12.5%;
+}
+
+@keyframes whiteToBlue {
+    from {
+        color: white;
+        font-size: 50px;
+    }
+    to {
+        color: #66fcf1;
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flip-container-easy,
+    .front-easy,
+    .back-easy {
+        width: 60px;
+        height: 60px;
+        margin: 5px 0;
+    }
+
+    .flip-container-medium,
+    .front-medium,
+    .back-medium {
+        width: 60px;
+        height: 60px;
+        margin: 5px 0;
+    }
+
+    .flip-container-hard,
+    .front-hard,
+    .back-hard {
+        width: 60px;
+        height: 60px;
+        margin: 5px 0;
+    }
+
+    .cols-medium {
+        flex-basis: 25%;
+    }
+
+    .cols-hard {
+        flex-basis: 25%;
+    }
+}

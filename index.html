@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="game-menu d-flex flex-col ">
+            <h1>Flip Cards</h1>
+            <hr>
+            <button class="btn" onclick="start('Easy')">Easy</button>
+            <button class="btn" onclick="start('Medium')">Medium</button>
+            <button class="btn" onclick="start('Hard')">Hard</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    start = (level) => {
+        localStorage.setItem('level',level);
+        window.location.href = "game.html";
+    }
+</script>
