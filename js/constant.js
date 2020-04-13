@@ -103,6 +103,6 @@ const ICON = [
 
 const LEVEL = {
     'Easy' : 16,
-    'Medium': 32,
-    'Hard': 64
+    'Medium': 24,
+    'Hard': 32
 };

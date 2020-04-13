@@ -26,8 +26,8 @@
 .flip-container-hard,
 .front-hard,
 .back-hard {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     margin: 10px 0;
 }
 
@@ -82,7 +82,7 @@ h2 {
 }
 
 .cols-medium {
-    flex-basis: 12.5%;
+    flex-basis: 16.66%;
 }
 
 .cols-hard {
@@ -96,7 +96,7 @@ h2 {
     }
     to {
         color: #66fcf1;
-        font-size: 100px;
+        font-size: 80px;
     }
 }
 
